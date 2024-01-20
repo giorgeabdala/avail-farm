@@ -1,0 +1,7 @@
+{
+  "minAmount": 0.5,
+  "maxAmount": 1,
+  "minHours": 2,
+  "maxHours": 4,
+  "endPoint": "wss://goldberg.avail.tools/ws"
+}
