@@ -19,7 +19,6 @@ export default class Main {
 
 
         console.log("Transfer successful");
-        process.exit(0);
 
     }
 

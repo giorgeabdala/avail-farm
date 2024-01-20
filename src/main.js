@@ -27,7 +27,6 @@ class Main {
                 return;
             }
             console.log("Transfer successful");
-            process.exit(0);
         });
     }
     static main() {
