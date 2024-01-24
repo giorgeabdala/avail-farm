@@ -1,4 +1,4 @@
-git pull
+git pull origin master
 docker build -t avail-farm-app .
 docker stop avail-farm-app
 docker rm avail-farm-app
