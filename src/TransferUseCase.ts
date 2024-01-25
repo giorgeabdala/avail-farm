@@ -23,6 +23,7 @@ export default class TransferUseCase {
         const hash = await transfer.signAndSend(sender, options);
 
         console.log(`Transfer ${amount} from ${sender.address} to ${receiver.address} with hash ${hash}`);
+        await api.disconnect();
         return new Ok(hash.toString());
     }
 }
