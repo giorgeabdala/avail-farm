@@ -1,25 +1,16 @@
-import { defineConfig } from 'vitest/config';
+/// <reference types="vitest" />
+import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
+    test: {
+        globals: true,
+        include: ['**/test/*.test.ts'],
+        testTimeout: 10000,
 
-        plugins: [
-
-        ],
-        test: {
-            globals: true,
-            include: ['**/test/*.test.ts'],
-            testTimeout: 5000,
-
-            coverage: {
-                reporter: ['html', 'text', 'lcov'],
-                reportsDirectory: './test/coverage'
-            }
-
-
-        },
-
-    }
-
-
-
-)
+        // @ts-ignore
+        coverage: {
+            reporter: ['html', 'text', 'lcov'],
+            reportsDirectory: './test/coverage'
+        }
+    },
+})

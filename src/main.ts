@@ -10,7 +10,7 @@ export default class Main {
         const amount = Random.getRandomAmount();
 
         const transferUseCase = new TransferUseCase();
-        const resultOrError = await transferUseCase.execute(seedSender.seed, seedReceiver.seed, amount);
+        const resultOrError = await transferUseCase.execute(seedSender, seedReceiver, amount);
 
         if (resultOrError.err) {
             console.log(resultOrError.val);
@@ -27,7 +27,7 @@ export default class Main {
             const hours = Random.getRandomHours();
             console.log(`Waiting ${hours} hours`);
 
-            await new Promise(r => setTimeout(r, hours));
+      //      await new Promise(r => setTimeout(r, hours));
             await this.transfer();
 
 
