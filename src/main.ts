@@ -26,12 +26,8 @@ export default class Main {
         while (true) {
             const hours = Random.getRandomHours();
             console.log(`Waiting ${hours} hours`);
-
-      //      await new Promise(r => setTimeout(r, hours));
+            await new Promise(r => setTimeout(r, hours));
             await this.transfer();
-
-
-
         }
 
     }
