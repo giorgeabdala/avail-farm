@@ -24,10 +24,15 @@ export default class Main {
 
     public static async main() {
         while (true) {
-            const hours = Random.getRandomHours();
-            console.log(`Waiting ${hours} hours`);
-            await new Promise(r => setTimeout(r, hours));
-            await this.transfer();
+            try {
+                console.log("Starting transfer");
+                await this.transfer();
+                const hours = Random.getRandomHours();
+                console.log(`Waiting ${hours} hours`);
+                await new Promise(r => setTimeout(r, hours));
+            } catch (e) {
+                console.log(e);
+            }
         }
 
     }
